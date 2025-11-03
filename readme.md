@@ -87,6 +87,135 @@ console.log(await res.json());
 curl -X POST "http://127.0.0.1:8000/translate"   -H "Content-Type: application/json"   -d '{"text": "안녕하세요", "src_lang": "ko"}'
 ```
 
+### C#
+
+```C#
+using System;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
+
+class Program {
+    static async Task Main() {
+        using var client = new HttpClient();
+        var content = new StringContent("{\"text\": \"안녕하세요\", \"src_lang\": \"ko\"}", Encoding.UTF8, "application/json");
+        var response = await client.PostAsync("http://127.0.0.1:8000/translate", content);
+        Console.WriteLine(await response.Content.ReadAsStringAsync());
+    }
+}
+
+```
+
+### Rust
+
+```rust
+use reqwest::Client;
+use serde_json::json;
+
+#[tokio::main]
+async fn main() -> Result<(), reqwest::Error> {
+    let client = Client::new();
+    let res = client
+        .post("http://127.0.0.1:8000/translate")
+        .json(&json!({ "text": "안녕하세요", "src_lang": "ko" }))
+        .send()
+        .await?;
+    println!("{}", res.text().await?);
+    Ok(())
+}
+
+```
+
+### C++ (libcurl)
+
+```cpp
+#include <curl/curl.h>
+#include <iostream>
+
+int main() {
+    CURL* curl = curl_easy_init();
+    if (curl) {
+        curl_easy_setopt(curl, CURLOPT_URL, "http://127.0.0.1:8000/translate");
+        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, "{\"text\": \"안녕하세요\", \"src_lang\": \"ko\"}");
+        struct curl_slist* headers = NULL;
+        headers = curl_slist_append(headers, "Content-Type: application/json");
+        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, NULL);
+        curl_easy_perform(curl);
+        curl_easy_cleanup(curl);
+    }
+    return 0;
+}
+
+```
+
+### C (libcurl)
+
+```c
+#include <stdio.h>
+#include <curl/curl.h>
+
+int main(void) {
+    CURL *curl = curl_easy_init();
+    if(curl) {
+        const char *json = "{\"text\": \"안녕하세요\", \"src_lang\": \"ko\"}";
+        curl_easy_setopt(curl, CURLOPT_URL, "http://127.0.0.1:8000/translate");
+        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, json);
+        struct curl_slist *headers = NULL;
+        headers = curl_slist_append(headers, "Content-Type: application/json");
+        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
+        curl_easy_perform(curl);
+        curl_easy_cleanup(curl);
+    }
+    return 0;
+}
+
+```
+
+### Java
+
+```java
+import java.net.http.*;
+import java.net.URI;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+        var client = HttpClient.newHttpClient();
+        var request = HttpRequest.newBuilder()
+            .uri(URI.create("http://127.0.0.1:8000/translate"))
+            .header("Content-Type", "application/json")
+            .POST(HttpRequest.BodyPublishers.ofString("{\"text\":\"안녕하세요\",\"src_lang\":\"ko\"}"))
+            .build();
+        var response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        System.out.println(response.body());
+    }
+}
+```
+
+### go
+
+```go
+package main
+
+import (
+    "bytes"
+    "fmt"
+    "net/http"
+    "io/ioutil"
+)
+
+func main() {
+    data := []byte(`{"text":"안녕하세요","src_lang":"ko"}`)
+    resp, err := http.Post("http://127.0.0.1:8000/translate", "application/json", bytes.NewBuffer(data))
+    if err != nil {
+        panic(err)
+    }
+    defer resp.Body.Close()
+    body, _ := ioutil.ReadAll(resp.Body)
+    fmt.Println(string(body))
+}
+```
+
 ---
 
 ## 🧠 Models Used
