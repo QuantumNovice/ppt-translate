@@ -1,4 +1,4 @@
-# 📝 PPT-Translate
+# 📝 PPT-Translate / 파워포인트 번역
 
 [![License](https://img.shields.io/github/license/QuantumNovice/ppt-translate)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
@@ -16,10 +16,19 @@
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/QuantumNovice/ppt-translate)
 [![Hits](https://hits.sh/github.com/QuantumNovice/ppt-translate.svg)](https://hits.sh/github.com/QuantumNovice/ppt-translate/)
 
+A selfhosted translation API accessible via many languages for batch translation of powerpoint presentation files and plain .text
+
+PowerPoint 프레젠테이션 파일과 일반 텍스트의 일괄 번역을 위해 여러 언어로 접근 가능한 셀프호스팅 번역 API
+
 ## 🌐 Overview
 
 Translate PowerPoint presentations or plain text between **Korean ↔ English** using local translation models.  
 Built on FastAPI and Hugging Face Transformers, with an optional Gradio UI.
+
+## Overview-Korean
+
+로컬 번역 모델을 사용하여 **한국어 ↔ 영어** 간 PowerPoint 프레젠테이션이나 일반 텍스트를 번역하세요.
+FastAPI와 Hugging Face Transformers를 기반으로 구축되었으며, Gradio UI(선택 사항)도 제공됩니다.
 
 ---
 
