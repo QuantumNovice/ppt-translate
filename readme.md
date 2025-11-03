@@ -8,6 +8,14 @@
 [![Build](https://img.shields.io/github/actions/workflow/status/QuantumNovice/ppt-translate/main.yml?branch=main)](https://github.com/QuantumNovice/ppt-translate/actions)
 [![Stars](https://img.shields.io/github/stars/QuantumNovice/ppt-translate?style=social)](https://github.com/QuantumNovice/ppt-translate/stargazers)
 
+[![Issues](https://img.shields.io/github/issues/QuantumNovice/ppt-translate)](https://github.com/QuantumNovice/ppt-translate/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/QuantumNovice/ppt-translate)](https://github.com/QuantumNovice/ppt-translate/pulls)
+[![Contributors](https://img.shields.io/github/contributors/QuantumNovice/ppt-translate)](https://github.com/QuantumNovice/ppt-translate/graphs/contributors)
+[![Last Commit](https://img.shields.io/github/last-commit/QuantumNovice/ppt-translate)](https://github.com/QuantumNovice/ppt-translate/commits/main)
+[![Repo Size](https://img.shields.io/github/repo-size/QuantumNovice/ppt-translate)](https://github.com/QuantumNovice/ppt-translate)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/QuantumNovice/ppt-translate)
+[![Hits](https://hits.sh/github.com/QuantumNovice/ppt-translate.svg)](https://hits.sh/github.com/QuantumNovice/ppt-translate/)
+
 ## 🌐 Overview
 
 Translate PowerPoint presentations or plain text between **Korean ↔ English**.  
@@ -115,4 +123,4 @@ docker run -p 8000:8000 ppt-translate
 
 ## 📜 License
 
-MIT License © [QuantumNovice](https://github.com/QuantumNovice)
+Do whatever you want with this project.
