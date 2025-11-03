@@ -18,10 +18,14 @@
 
 ## 🌐 Overview
 
-Translate PowerPoint presentations or plain text between **Korean ↔ English**.  
+Translate PowerPoint presentations or plain text between **Korean ↔ English** using local translation models.  
 Built on FastAPI and Hugging Face Transformers, with an optional Gradio UI.
 
 ---
+
+## UI Screenshot
+
+![UI Screenshot](./img/ui_main.png)
 
 ## 🚀 Quick Start
 
